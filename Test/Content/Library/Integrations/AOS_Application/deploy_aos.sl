@@ -2,11 +2,11 @@ namespace: Integrations.AOS_Application
 flow:
   name: deploy_aos
   inputs:
-    - target_host: demo.hcmx.local
+    - target_host: 172.16.239.129
     - target_host_username: root
     - target_host_password:
         default: Cloud_1234
-        sensitive: true
+        sensitive: false
   workflow:
     - install_postgres:
         do:
@@ -60,16 +60,16 @@ extensions:
     steps:
       install_postgres:
         x: 37
-        'y': 77.578125
+        'y': 76
       install_java:
-        x: 210
-        'y': 94.578125
+        x: 209
+        'y': 108
       install_tomcat:
         x: 382
-        'y': 118
+        'y': 117
       install_aos_application:
-        x: 646
-        'y': 118
+        x: 674
+        'y': 138
         navigate:
           76472f49-8731-972f-3822-82b896f92329:
             targetId: 54ef25e1-47bd-e464-9ecb-55aa1bb3041e
